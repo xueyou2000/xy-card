@@ -1,7 +1,32 @@
 [
     {
         "name": "Simple",
-        "title": "简答例子",
-        "desc": "简答例子的一段描述。"
+        "title": "基本使用",
+        "desc": "指定卡片标题和卡片内容。"
+    },
+    {
+        "name": "NoCardTitle",
+        "title": "无标题",
+        "desc": "只包含内容区域, 卡片标题是可选的。"
+    },
+    {
+        "name": "MetaCover",
+        "title": "Meta + 封面",
+        "desc": "CardMeta组件配合 cover 封面属性。"
+    },
+    {
+        "name": "Loading",
+        "title": "加载中",
+        "desc": "设置 loading 属性显示加载中的骨架屏占位符。"
+    },
+    {
+        "name": "Nest",
+        "title": "嵌套卡片",
+        "desc": "卡片允许嵌套。"
+    },
+    {
+        "name": "Actions",
+        "title": "操作按钮",
+        "desc": "配置 actions 属性，指定卡片底部的操作按钮"
     }
 ]

@@ -1,0 +1,152 @@
+$CardWarpPrefixCls: "xy-card";
+
+/* 卡片 */
+.#{$CardWarpPrefixCls} {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s;
+}
+.#{$CardWarpPrefixCls}.#{$CardWarpPrefixCls}-bordered {
+    border: 1px solid #e8e8e8;
+}
+.#{$CardWarpPrefixCls}.#{$CardWarpPrefixCls}-hoverable {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+    border-color: rgba(0, 0, 0, 0.09);
+}
+
+/* 卡片头部 */
+.#{$CardWarpPrefixCls}-header {
+    background: transparent;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 24px;
+    border-radius: 2px 2px 0 0;
+    zoom: 1;
+    margin-bottom: -1px;
+    min-height: 48px;
+
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+.#{$CardWarpPrefixCls}-header-wrapper {
+    display: flex;
+}
+.#{$CardWarpPrefixCls}-header-title {
+    font-size: 16px;
+    padding: 16px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    display: inline-block;
+    flex: 1;
+    margin: 0;
+}
+.#{$CardWarpPrefixCls}-extra {
+    float: right;
+    padding: 17.5px 0;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* 卡片封面 */
+.#{$CardWarpPrefixCls}-cover > * {
+    width: 100%;
+    display: block;
+}
+
+/* 卡片体 */
+.#{$CardWarpPrefixCls}-body {
+    padding: 24px;
+    zoom: 1;
+
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+/* 卡片操作按钮 */
+.#{$CardWarpPrefixCls}-actions {
+    border-top: 1px solid #e8e8e8;
+    background: #fafafa;
+    zoom: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+        float: left;
+        text-align: center;
+        margin: 12px 0;
+        color: rgba(0, 0, 0, 0.45);
+        box-sizing: border-box;
+
+        & > span {
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            line-height: 22px;
+            min-width: 32px;
+            position: relative;
+
+            &:hover {
+                color: lighten(#1890ff, 10%);
+                transition: color 0.3s;
+            }
+        }
+    }
+
+    & > li:not(:last-child) {
+        border-right: 1px solid #e8e8e8;
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+/* inner类型 */
+.#{$CardWarpPrefixCls}.#{$CardWarpPrefixCls}-type-inner {
+    .#{$CardWarpPrefixCls}-header {
+        padding: 0 24px;
+        background: #fafafa;
+    }
+
+    .#{$CardWarpPrefixCls}-header-title {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+
+    .#{$CardWarpPrefixCls}-extra {
+        padding: 13.5px 0;
+    }
+
+    .#{$CardWarpPrefixCls}-body {
+        padding: 16px 24px;
+    }
+}

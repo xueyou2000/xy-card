@@ -1,6 +1,6 @@
 {
     "name": "xy-card",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "基于 React Hooks 的按钮组件",
     "types": "es/index.d.ts",
     "main": "es/index.js",
@@ -36,20 +36,30 @@
         "registry": "http://registry.npmjs.org/"
     },
     "devDependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.17",
+        "@fortawesome/react-fontawesome": "^0.1.4",
+        "@types/classnames": "^2.2.7",
         "@types/jest": "24.0.6",
         "@types/node": "11.9.4",
         "@types/react": "16.8.2",
         "@types/react-dom": "16.8.2",
-        "react-testing-library": "^6.0.0",
         "quick-react-scripts": "1.1.6",
+        "react-testing-library": "^6.0.0",
         "xy-manual-tools": "0.1.2"
     },
     "dependencies": {
+        "classnames": "^2.2.6",
         "react": "^16.8.2",
-        "react-dom": "^16.8.2"
+        "react-dom": "^16.8.2",
+        "xy-skeleton": "^0.0.4"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/xueyou2000/xy-card.git"
+    },
+    "jest": {
+        "transformIgnorePatterns": [
+            "<rootDir>/node_modules/(?!(xy-grid|utils-hooks|xy-skeleton))"
+        ]
     }
 }

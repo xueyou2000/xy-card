@@ -10,37 +10,52 @@
 
 # xy-card
 
-基于`React Hooks` + `typescript`的基础组件
+卡片组件
 
 ## 安装
 
 ```bash
 # yarn
-yarn add xy-card
+yarn add xy-card xy-skeleton xy-grid utils-hooks xy-grid classnames
 ```
 
 ## 使用例子
 
-```ts
+```tsx
 import React from "react";
 import ReactDOM from "react-dom";
-import XyCard from "xy-card";
-ReactDOM.render(<XyCard />, container);
+import { Card, CardMeta } from "xy-card";
+ReactDOM.render(
+    <Card title="卡片标题">
+        <CardMeta title="Europe Street beat">www.instagram.com</CardMeta>
+    </Card>,
+    container
+);
 ```
 
 ## API
 
-| 属性     | 说明                                                               | 类型           | 默认值    |
-| -------- | ------------------------------------------------------------------ | -------------- | --------- |
-| ghost    | 幽灵属性，使按钮背景透明                                           | boolean        | false     |
-| long     | 是否长按钮                                                         | boolean        | false     |
-| icon     | 设置按钮的图标类型                                                 | IconDefinition | -         |
-| loading  | 设置按钮载入状态                                                   | boolean        | `false`   |
-| disabled | 按钮失效状态                                                       | boolean        | `false`   |
-| shape    | 设置按钮形状，可选值为 `circle` 或者不设                           | string         | -         |
-| size     | 设置按钮大小，可选值为 `small` `large` 或者不设                    | string         | `default` |
-| type     | 设置按钮类型，可选值为 `primary` `dashed` `text` `danger` 或者不设 | string         | -         |
-| onClick  | `click` 事件的 handler                                             | function       | -         |
+### Card
+
+| 属性      | 说明                                   | 类型                | 默认值 |
+| --------- | -------------------------------------- | ------------------- | ------ |
+| children  | 卡片内容                               | React.ReactNode     | -      |
+| actions   | 卡片操作按钮, 在卡片底部的操作按钮集合 | React.ReactNode[]   | -      |
+| bordered  | 是否有边框                             | boolean             | true   |
+| cover     | 卡片封面                               | React.ReactNode     | -      |
+| loading   | 是否加载中                             | boolean             | false  |
+| title     | 卡片标题                               | React.ReactNode     | -      |
+| type      | 卡片类型, 可用值"inner"或不设          | string              | -      |
+| hoverable | 鼠标移入悬浮                           | boolean             | false  |
+| bodyStyle | 卡片内容样式                           | React.CSSProperties | 无     |
+
+### CardMeta
+
+| 属性     | 说明     | 类型            | 默认值 |
+| -------- | -------- | --------------- | ------ |
+| avatar   | 头像     | React.ReactNode | -      |
+| children | 描述内容 | React.ReactNode | -      |
+| title    | 标题     | React.ReactNode | -      |
 
 ## 开发
 

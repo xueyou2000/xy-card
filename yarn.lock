@@ -849,6 +849,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/classnames@^2.2.7":
+  version "2.2.7"
+  resolved "https://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.7.tgz#fb68cc9be8487e6ea5b13700e759bfbab7e0fefd"
+  integrity sha1-+2jMm+hIfm6lsTcA51m/urfg/v0=
+
 "@types/estree@0.0.39":
   version "0.0.39"
   resolved "https://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
@@ -8805,7 +8810,7 @@ xy-divider@^0.0.2:
     react "^16.8.2"
     react-dom "^16.8.2"
 
-xy-grid@^0.0.3:
+xy-grid@0.0.3, xy-grid@^0.0.3:
   version "0.0.3"
   resolved "https://registry.npm.taobao.org/xy-grid/download/xy-grid-0.0.3.tgz#1917f89928d86f68f5231e986095ee47b5dda00d"
   integrity sha1-GRf4mSjYb2j1Ix6YYJXuR7XdoA0=
@@ -8902,6 +8907,16 @@ xy-model@^0.0.2:
     react-dom "^16.8.2"
     utils-hooks "^0.0.65"
     xy-messagebox "^0.0.4"
+
+xy-skeleton@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/xy-skeleton/download/xy-skeleton-0.0.4.tgz#1ccc0c3cfc55ee191c20bbda2112d02c3340a068"
+  integrity sha1-HMwMPPxV7hkcILvaIRLQLDNAoGg=
+  dependencies:
+    classnames "^2.2.6"
+    react "^16.8.2"
+    react-dom "^16.8.2"
+    xy-grid "0.0.3"
 
 y18n@^3.2.1:
   version "3.2.1"

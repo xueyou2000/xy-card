@@ -4,7 +4,7 @@ import { Card } from "../src";
 export default function() {
     return (
         <div>
-            <Card title="Card title" style={{ width: 300 }}>
+            <Card style={{ width: 300 }}>
                 <p>Card content</p>
                 <p>Card content</p>
                 <p>Card content</p>

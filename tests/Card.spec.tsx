@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { Card } from "../src";
 
 describe("Card", () => {
@@ -17,7 +17,7 @@ describe("Card", () => {
         const wrapper = render(
             <Card title="Card title">
                 <p>Card content</p>
-            </Card>
+            </Card>,
         );
 
         const title = wrapper.getByText("Card title");
@@ -34,7 +34,7 @@ describe("Card", () => {
         const wrapper = render(
             <Card cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
                 <p>Card content</p>
-            </Card>
+            </Card>,
         );
 
         const img = wrapper.getByAltText("example");
@@ -45,7 +45,7 @@ describe("Card", () => {
         const wrapper = render(
             <Card type="inner">
                 <p>Card content</p>
-            </Card>
+            </Card>,
         );
 
         const card = wrapper.container.querySelector(".xy-card");
@@ -56,7 +56,7 @@ describe("Card", () => {
         const wrapper = render(
             <Card loading={true}>
                 <p>Card content</p>
-            </Card>
+            </Card>,
         );
 
         const skeleton = wrapper.container.querySelector(".xy-skeleton");
@@ -67,7 +67,7 @@ describe("Card", () => {
         const wrapper = render(
             <Card actions={["按钮1", "按钮2"]}>
                 <p>Card content</p>
-            </Card>
+            </Card>,
         );
 
         const btns = wrapper.container.querySelectorAll(".xy-card-actions li") as NodeListOf<HTMLElement>;

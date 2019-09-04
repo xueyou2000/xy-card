@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { Card, CardMeta } from "../src";
 
 describe("CardMeta", () => {
@@ -15,7 +15,7 @@ describe("CardMeta", () => {
         const wrapper = render(
             <CardMeta avatar={<img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" alt="avatar img" />} title="meta标题">
                 描述说明
-            </CardMeta>
+            </CardMeta>,
         );
 
         const img = wrapper.getByAltText("avatar img");

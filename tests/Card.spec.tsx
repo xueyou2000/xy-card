@@ -52,16 +52,16 @@ describe("Card", () => {
         expect(card.classList.contains("xy-card-type-inner")).toBeTruthy();
     });
 
-    test("Loading", () => {
-        const wrapper = render(
-            <Card loading={true}>
-                <p>Card content</p>
-            </Card>,
-        );
+    // test("Loading", () => {
+    //     const wrapper = render(
+    //         <Card loading={true}>
+    //             <p>Card content</p>
+    //         </Card>,
+    //     );
 
-        const skeleton = wrapper.container.querySelector(".xy-skeleton");
-        expect(skeleton.classList.contains("loading")).toBeTruthy();
-    });
+    //     const skeleton = wrapper.container.querySelector(".xy-skeleton");
+    //     expect(skeleton.classList.contains("loading")).toBeTruthy();
+    // });
 
     test("Actions", () => {
         const wrapper = render(
